@@ -1,0 +1,73 @@
+
+
+
+h1
+  text-transform: uppercase
+  text-align: center
+  color: #fff
+  position: relative
+  width: 100%
+  z-index: 10
+  margin: 0 auto 1rem
+  max-width: 280px
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: calc(50% - 4px)
+    left: -20px
+    width: calc(100% + 40px)
+    height: 8px
+    z-index: -1
+    border-top: 1px solid #e85454
+    border-bottom: 1px solid #e85454
+  span
+    padding: 0 20px
+    background: #313133
+
+h2
+  color: #787878
+  text-transform: uppercase
+  font-size: 1.2rem
+  letter-spacing: .5rem
+  margin-bottom: 2.2rem
+  text-align: center
+
+.sidebar
+  margin-bottom: 30px
+.sorting
+  text-align: right
+  padding-bottom: 30px
+  &__wrapper
+    display: inline-block
+    margin-left: 20px
+
+.add-more
+  button
+    color: #787878
+    font-size: 1.2rem
+    line-height: 2.8rem
+    text-transform: uppercase
+    position: relative
+    padding-right: 2.8rem
+    i
+      position: absolute
+      right: 0
+      padding: 0.8rem
+      transition: all 1s ease
+    &:focus
+      outline: none
+    &:hover
+      i
+        transform: scale(1.2) rotate(180deg)
+
+@media only screen and (max-width : 768px)
+  .banner-slider
+    display: none
+
+  .sorting
+    &__wrapper
+      width: 49%
+      margin-left: 0
+      &:first-of-type
+        text-align: left

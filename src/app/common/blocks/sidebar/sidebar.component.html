@@ -1,0 +1,51 @@
+
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Company
+    </md-panel-title>
+  </md-expansion-panel-header>
+
+  <div class="wrapper" *ngFor="let company of companies">
+    <md-checkbox [checked]="true" (change)="applyFilter($event, companyType, company)">{{company}}</md-checkbox>
+  </div>
+
+</md-expansion-panel>
+
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Year
+    </md-panel-title>
+  </md-expansion-panel-header>
+
+  <div class="wrapper" *ngFor="let year of years">
+    <md-checkbox [checked]="true" (change)="applyFilter($event, yearType, year)">{{year}}</md-checkbox>
+  </div>
+
+</md-expansion-panel>
+
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Carbody
+    </md-panel-title>
+  </md-expansion-panel-header>
+  <div class="wrapper" *ngFor="let carbody of carbodies">
+    <md-checkbox [checked]="true" (change)="applyFilter($event, carbodyType, carbody)">{{carbody}}</md-checkbox>
+  </div>
+
+</md-expansion-panel>
+
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Transmission type
+    </md-panel-title>
+  </md-expansion-panel-header>
+
+  <div class="wrapper" *ngFor="let transmission of transmissions">
+    <md-checkbox [checked]="true" (change)="applyFilter($event, transmissionType, transmission)">{{transmission}}</md-checkbox>
+  </div>
+
+</md-expansion-panel>

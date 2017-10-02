@@ -1,0 +1,47 @@
+.author
+  &__info
+    color: #000
+    z-index: 10
+    background: #fff
+    padding: 30px 40px
+    position: relative
+    margin: 15px
+    &:after
+      content: ''
+      border: 1px solid #e85454
+      position: absolute
+      top: -15px
+      left: -15px
+      right: -15px
+      bottom: -15px
+  &__wrapper
+    min-height: 600px
+  &__photo
+    position: absolute
+    margin: 0 15px
+    right: 0
+    height: 600px
+    width: 80%
+    background: url("./../../../assets/img/me_1.jpg") center no-repeat
+    background-size: cover
+    &:hover
+      background-image: url("./../../../assets/img/me_2.jpg")
+
+@media only screen and (max-width : 992px)
+  .author
+    &__wrapper
+      min-height: 575px
+    &__photo
+      height: 575px
+
+@media only screen and (max-width : 768px)
+  .author
+    &__photo
+      width: calc(100% - 30px)
+
+@media only screen and (max-width : 480px)
+  .author
+    &__wrapper
+      min-height: auto
+    &__photo
+      display: none

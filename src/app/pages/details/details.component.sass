@@ -1,0 +1,38 @@
+.tabs
+  padding: 50px 0
+  &__wrapper
+    padding: 50px 10px
+    overflow: hidden
+
+h1
+  text-transform: uppercase
+  text-align: center
+  color: #fff
+  position: relative
+  width: 100%
+  z-index: 10
+  margin-bottom: 1rem
+  max-width: 800px
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: calc(50% - 4px)
+    left: -20px
+    width: calc(100% + 40px)
+    height: 8px
+    z-index: -1
+    border-top: 1px solid #e85454
+    border-bottom: 1px solid #e85454
+  span
+    padding: 0 20px
+    background: #313133
+    display: inline-block
+
+.car__info
+  color: #fff
+  font-size: 1.4rem
+  line-height: 3rem
+  mark
+    color: #787878
+    background: none

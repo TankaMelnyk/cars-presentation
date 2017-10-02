@@ -1,0 +1,67 @@
+<main class="main">
+  <div class="main__wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+          <h1>
+            <span>{{card.company}} {{card.model}}</span>
+          </h1>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="tabs">
+            <md-tab-group>
+              <md-tab label="Photo">
+
+                <div class="tabs__wrapper">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <app-slider [galleries]="galleries"></app-slider>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="car__info">
+                        <div>
+                          Company:  <mark>{{card.company}}</mark>
+                        </div>
+                        <div>
+                          Model:  <mark>{{card.model}}</mark>
+                        </div>
+                        <div>
+                          Year of issue:  <mark>{{card.year}}</mark>
+                        </div>
+                        <div>
+                          Price: <mark>$ {{card.price}} </mark>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </md-tab>
+
+              <md-tab label="Main characteristics">
+                <div class="tabs__wrapper">
+
+                  <app-table [details]="details"></app-table>
+
+                </div>
+              </md-tab>
+
+              <md-tab label="Video">
+
+                <div class="tabs__wrapper">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6" *ngFor="let video of videos" >
+                      <app-video [video]="video"></app-video>
+                    </div>
+                  </div>
+                </div>
+
+              </md-tab>
+
+            </md-tab-group>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

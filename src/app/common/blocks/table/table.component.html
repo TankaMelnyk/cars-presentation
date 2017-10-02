@@ -1,0 +1,18 @@
+<div class="table mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource">
+
+    <ng-container mdColumnDef="propertyName">
+      <md-header-cell *mdHeaderCellDef> <div class="table__th">Characteristic</div> </md-header-cell>
+      <md-cell *mdCellDef="let element"> <div class="table__tr"> {{element.propertyName}} </div> </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="propertyValue">
+      <md-header-cell *mdHeaderCellDef> <div class="table__th">Value</div> </md-header-cell>
+      <md-cell *mdCellDef="let element"> <div class="table__tr">{{element.propertyValue}}</div> </md-cell>
+    </ng-container>
+
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+</div>
+

@@ -1,0 +1,20 @@
+
+
+<a [routerLink]="['details', card.id]" class="card-car" appHover>
+  <md-card appHover>
+    <div class="card-car__img">
+      <img md-card-image src={{card.preview}} alt="super-cars">
+      <div class="card-car__price">
+        ${{card.price}}
+      </div>
+    </div>
+    <div class="card-car__info">
+      <md-card-header>
+        <md-card-title>{{card.company}} {{card.model}}</md-card-title>
+        <md-card-subtitle>{{card.year}}</md-card-subtitle>
+      </md-card-header>
+    </div>
+  </md-card>
+</a>
+
+
